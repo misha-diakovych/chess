@@ -191,8 +191,9 @@ export default {
   @keyframes fadeIn {
     0%{
       transform: rotateY(180deg);
-    } 100% {
-        transform: rotateY(0deg);
-      }
+    }
+    100% {
+      transform: rotateY(0deg);
+    }
   }
 </style>
