@@ -1,6 +1,8 @@
 <template>
 	<div class="base-timer">
-		<span class="base-timer__label" :style="{'color': remainingPathColor}">{{ formattedTimeLeft }}</span>
+		<span class="base-timer__label"
+					:style="{'color': remainingPathColor}">
+			{{ formattedTimeLeft }}</span>
 	</div>
 </template>
 
@@ -82,8 +84,7 @@
                 }
             }
         },
-
-        methods: {
+				methods: {
             onTimesUp() {
                 clearInterval(this.timerInterval);
             },

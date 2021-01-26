@@ -1,5 +1,5 @@
 <template>
-  <div class="chess-board">
+  <section class="chess-board">
     <div class="chess-board__left-board">
       <div class="chess-board__user-info">
         <div>
@@ -18,9 +18,9 @@
         </div>
         <div class='chess-board__boar-inner' id="flip-board">
           <div
+            class="chess-board__boar-item"
             v-for="(el, index) in 8"
             :key="index"
-            style="display: flex; align-items: center;"
             :style="{'flexDirection': index % 2 === 0 ? '' : 'row-reverse'}">
             <div v-for="(el, index) in 8" :key="index" style="height: 50px;">
               <span class="chess-board__square"
@@ -48,7 +48,7 @@
       </div>
       <div class="chess-board__button-start-game" @click="countDownTimer">Start Game</div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -119,6 +119,10 @@ export default {
       display: inline-flex;
       align-items: center;
       justify-content: center;
+    }
+    &__boar-item {
+      display: flex;
+      align-items: center;
     }
     &__user-info {
       display: flex;

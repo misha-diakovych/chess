@@ -7,7 +7,7 @@
             <div
               v-for="(option, index) of options"
               :key="index"
-              @click="selected = option;open = false;$emit('input', option);">
+              @click="selectedValue(option)">
                 {{ option }}
             </div>
         </div>
@@ -46,6 +46,13 @@
         mounted() {
             this.$emit("input", this.selected);
         },
+        methods: {
+            selectedValue (val) {
+                this.selected = val;
+                this.open = false;
+                this.$emit('input', val);
+            }
+        }
     };
 </script>
 
