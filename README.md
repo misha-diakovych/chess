@@ -1,4 +1,4 @@
-# chess
+# Chess
 
 ## Project setup
 ```
